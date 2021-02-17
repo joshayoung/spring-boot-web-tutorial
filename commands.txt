@@ -1,1 +1,6 @@
 http://localhost:8080/api/v1/student
+
+psql postgres -U postgres -h localhost
+CREATE DATABASE student;
+GRANT ALL PRIVILEGES ON DATABASE "student" TO postgres;
+\c student;
