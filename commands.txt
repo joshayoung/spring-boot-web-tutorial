@@ -4,4 +4,5 @@ psql postgres -U postgres -h localhost
 CREATE DATABASE student;
 GRANT ALL PRIVILEGES ON DATABASE "student" TO postgres;
 \c student;
-SELECT * FROM student;
+SELECT * FROM student;java -jar demo-0.0.1-SNAPSHOT.jar
+java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8085
