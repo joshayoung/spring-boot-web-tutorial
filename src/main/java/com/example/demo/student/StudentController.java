@@ -1,5 +1,6 @@
 package com.example.demo.student;
 
+import com.example.demo.exception.ApiRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,9 @@ public class StudentController {
 
     @GetMapping
     public List<Student> getStudents() {
-        return studentService.getStudents();
+        throw new ApiRequestException("Oops cannot get the students with custom exception");
+        //throw new IllegalStateException("Oops cannot get the students");
+//        return studentService.getStudents();
     }
 
     @PostMapping
